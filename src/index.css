@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body{
+    font-family: 'fortnite';
+    user-select: none;
+}
+::selection{
+    background: darkblue;
+    color: white;
+
+}
+
+@font-face {
+    font-family: 'fortnite';
+    src: url('/fonts/fortnite.otf') format('opentype');
+}
