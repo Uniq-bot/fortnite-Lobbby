@@ -56,8 +56,8 @@ const NavBar = () => {
                 })
             }
         </nav>
-    <div onMouseEnter={()=>playHoverSound()} className={`px-3 py-2 w-20 h-18 cursor-pointer uppercase hover:bg-gray-300/10 transition-all rounded-lg duration-300` } onClick={()=>setIsSideBarActive(!isSideBarActive)}>
-        <img src={'https://mir-s3-cdn-cf.behance.net/projects/404/866c2c230382405.68761f598b7eb.jpg'} alt={'profile'} className={' w-full h-full rounded-full'} />
+    <div onMouseEnter={()=>playHoverSound()} className={`w-15 h-15 p-1 cursor-pointer uppercase hover:bg-gray-300 transition-all rounded-full duration-300` } onClick={()=>setIsSideBarActive(!isSideBarActive)}>
+        <img src={'https://mir-s3-cdn-cf.behance.net/projects/404/866c2c230382405.68761f598b7eb.jpg'} alt={'profile'} className={' w-full h-full object-cover rounded-full'} />
     </div>
         </div>
     )

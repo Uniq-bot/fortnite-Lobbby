@@ -66,3 +66,5 @@ export const suggestedFriends = [
     }
 ]
 
+export const events=['https://cdn2.unrealengine.com/fortnite-the-big-bang-live-event-1920x1080-8cc212a8f610.jpg',
+'https://cdn2.unrealengine.com/fortnite-fracture-1920x1080-1ea359c1d0c3.jpg', 'https://cdn-0001.qstv.on.epicgames.com/YbjXbDeWIpPMPBNssh/image/landscape_comp.jpeg','https://static.toiimg.com/thumb/msid-121550291,width-1280,height-720,resizemode-4/121550291.jpg', 'https://specials-images.forbesimg.com/imageserve/656a5fdbd366561d77e747b9/960x0.jpg']
