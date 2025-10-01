@@ -12,7 +12,7 @@ const MainLobby = () => {
 
     return (
         <div className={'relative w-full min-h-screen bg-[url("https://pbs.twimg.com/media/F0WwwyeWwAEFYuG.jpg:large")] bg-cover bg-no-repeat'}>
-           <div className={'w-full h-full absolute inset-0 bg-gradient-to-b from-[#0E1736]/90 via-[#0B1230]/80 to-[#020617]/90 pointer-events-none'} />
+           <div className={'w-full h-full absolute  bg-gradient-to-b from-[#0E1736]/40 via-[#0B1230]/30 to-[#020617]/40 pointer-events-none'} />
             <div className={'w-70 h-40 hover:cursor-pointer rounded-lg absolute overflow-hidden top-25 left-5 '}>
                 <Slider />
             </div>
