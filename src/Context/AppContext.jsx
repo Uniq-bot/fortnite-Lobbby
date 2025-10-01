@@ -1,5 +1,5 @@
 import {createContext, useEffect, useRef, useState} from "react";
-import {fortniteUsers, suggestedFriends, events} from "../assets/assets.js";
+import {fortniteUsers, suggestedFriends, events, loadoutData} from "../assets/assets.js";
 export const AppContext=createContext();
 
 export const AppContextProvider=({children})=>{
@@ -8,6 +8,13 @@ export const AppContextProvider=({children})=>{
     const [AddFriends, setAddFriends]=useState([])
     const hoverSound=useRef(new Audio('/Sound/mouse-hover.mp3'));
     const[allEvents, setAllEvents]=useState([])
+    const [outfits, setOutfits]=useState(null)
+    const [pickaxes, setPickaxes]=useState(null)
+    const [backblings, setBackblings]=useState(null)
+    // Selected items for locker
+    const [selectedOutfit, setSelectedOutfit] = useState(null)
+    const [selectedPickaxe, setSelectedPickaxe] = useState(null)
+    const [selectedBackbling, setSelectedBackbling] = useState(null)
     const playHoverSound=()=>{
         if(hoverSound.current){
             hoverSound.current.currentTime = 0; // reset to start
@@ -18,6 +25,13 @@ export const AppContextProvider=({children})=>{
             setUsers(fortniteUsers)
         setAddFriends(suggestedFriends)
         setAllEvents(events)
+        setOutfits(loadoutData.outfits)
+        setPickaxes(loadoutData.pickaxes)
+        setBackblings(loadoutData.backblings)
+        // Initialize defaults once data is loaded
+        if (!selectedOutfit && loadoutData.outfits?.length) setSelectedOutfit(loadoutData.outfits[0])
+        if (!selectedPickaxe && loadoutData.pickaxes?.length) setSelectedPickaxe(loadoutData.pickaxes[0])
+        if (!selectedBackbling && loadoutData.backblings?.length) setSelectedBackbling(loadoutData.backblings[0])
     },[])
 
 
@@ -26,7 +40,23 @@ export const AppContextProvider=({children})=>{
 
 
     return(
-        <AppContext.Provider value={{isSideBarActive, setIsSideBarActive, AddFriends,playHoverSound, users, allEvents}}>
+        <AppContext.Provider value={{
+            isSideBarActive,
+            outfits,
+            pickaxes,
+            backblings,
+            selectedOutfit,
+            setSelectedOutfit,
+            selectedPickaxe,
+            setSelectedPickaxe,
+            selectedBackbling,
+            setSelectedBackbling,
+            setIsSideBarActive,
+            AddFriends,
+            playHoverSound,
+            users,
+            allEvents
+        }}>
             {children}
         </AppContext.Provider>
     )

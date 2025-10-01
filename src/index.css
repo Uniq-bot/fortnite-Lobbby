@@ -14,3 +14,8 @@ body{
     font-family: 'fortnite';
     src: url('/fonts/fortnite.otf') format('opentype');
 }
+*{
+    scroll-behavior: smooth;
+    --webkit-scrollbar:transparent;
+    scrollbar-width: none;
+}

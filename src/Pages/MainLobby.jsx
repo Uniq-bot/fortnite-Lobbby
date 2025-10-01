@@ -11,12 +11,12 @@ const MainLobby = () => {
     const {setIsSideBarActive}=useContext(AppContext)
 
     return (
-        <div className={'bg-[url("https://pbs.twimg.com/media/F0WwwyeWwAEFYuG.jpg:large")] relative bg-cover bg-no-repeat w-full min-h-screen'}>
-           <div className={'w-full h-full absolute top-0 left-0 bg-gradient-to-t from-[black]/40 to-[white]/20'} />
+        <div className={'relative w-full min-h-screen bg-[url("https://pbs.twimg.com/media/F0WwwyeWwAEFYuG.jpg:large")] bg-cover bg-no-repeat'}>
+           <div className={'w-full h-full absolute inset-0 bg-gradient-to-b from-[#0E1736]/90 via-[#0B1230]/80 to-[#020617]/90 pointer-events-none'} />
             <div className={'w-70 h-40 hover:cursor-pointer rounded-lg absolute overflow-hidden top-25 left-5 '}>
                 <Slider />
             </div>
-            <div className={'w-70 h-60 px-5 pt-5 pb-3 flex flex-col items-center rounded-4xl justify-between absolute bottom-10 left-5 bg-gray-800/80'}>
+            <div className={'w-70 h-60 px-5 pt-5 pb-3 flex flex-col items-center rounded-4xl justify-between absolute bottom-10 left-5 bg-gray-500/50 border border-gray-500/30 hover:border-gray-300 transition-colors'}>
                 <h1 className={'text-4xl text-white/80 w-full flex items-center justify-center py-3'} >
                     Battle Royale
                 </h1>
